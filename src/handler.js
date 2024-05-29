@@ -1,7 +1,7 @@
-const getRootHandler = (request, h)=>{
+const getRootHandler = (request, h) => {
     const response = h.response({
         status: 'success',
-        message: 'Welcome to Service 1',
+        message: 'Welcome to Service 2',
     });
 
     response.code(200);
@@ -9,8 +9,8 @@ const getRootHandler = (request, h)=>{
     return response;
 }
 
-const getAnyHandler = (request, h)=>{
-    console.log('GET Any Handler Called!');
+const getAnyHandler = (request, h) => {
+    console.log('GET Any Handler Called! (Service 2)');
 
     return h.redirect('/');
 }

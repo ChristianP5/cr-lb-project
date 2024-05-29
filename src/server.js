@@ -6,7 +6,7 @@ dotenv.config();
 
 const init = async () => {
     const server = Hapi.server({
-        host: process.env.ENV_HOST,
+        host: process.env.NODE_ENV === 'production'? '0.0.0.0' : 'localhost',
         port: process.env.ENV_PORT  
     });
 
